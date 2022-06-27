@@ -1,0 +1,5 @@
+Running trainning and predictions
+Fitting BBCF_nomem(1000,20,KNNMeans,{'name': 'pearson', 'user_based': False, 'min_support': 1},QUBIC2(True,100000,3,1,0.99))
+running biclustering
+computing biclustering solution
+['/mnt/c/Users/migue/OneDrive/Ambiente de Trabalho/usbcf-paper/Code/surprise/biclustering/bin/qubic2', '-i', '/tmp/tmph_gb0qiu/data.txt', '-o', '100000', '-d', '-f', '0.99', '-k', '3', '-c', '1']
