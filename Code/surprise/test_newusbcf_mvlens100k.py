@@ -4,7 +4,7 @@ from surprise import Reader
 from surprise import accuracy
 from surprise import dump
 from surprise import dataset
-from usbcf import USBCF, USBCF_nomem, USBCFCombineBicSols, USBCFCombineBicSols_nomem
+from new_usbcf import USBCF, USBCF_nomem
 from bbcf import BBCF, BBCF_nomem
 from tqdm import tqdm
 from surprise.model_selection import PredefinedKFold, KFold
@@ -246,8 +246,8 @@ def main():
     algo_dict["baseline"] = algo_baseline
 
 
-    param_grid_bbcf = {"number_of_nearest_bics": [50,100,150,200,250,300], "nnbrs": [20,40],
-                        "min_num_biclusters": [100000], "min_cols": [3,5,7,10,15,20],
+    param_grid_bbcf = {"number_of_nearest_bics": [50,100,150], "nnbrs": [20],
+                        "min_num_biclusters": [100000], "min_cols": [5,7,10],
                         "consistency": [1], "max_overlap": [0.99]}
     grid = ParameterGrid(param_grid_bbcf)
     for params in grid:

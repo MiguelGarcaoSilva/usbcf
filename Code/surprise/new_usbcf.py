@@ -265,7 +265,7 @@ class USBCF(AlgoBase):
         return df_bicluster
 
     def __str__(self):
-        return 'USBCF({},{})'.format(self.threshold_sim, self.bic_algo)
+        return 'New_USBCF({},{})'.format(self.threshold_sim, self.bic_algo)
 
 
 class USBCF_nomem(AlgoBase):
@@ -592,7 +592,7 @@ class USBCF_nomem(AlgoBase):
         return pred
 
     def __str__(self):
-        return 'USBCF_nomem({},{},KNNMeans,{},{})'.format(self.threshold_sim,
+        return 'New_USBCF_nomem({},{},KNNMeans,{},{})'.format(self.threshold_sim,
                                                           self.nnbrs,
                                                           self.sim_options,
                                                           self.min_cols)
